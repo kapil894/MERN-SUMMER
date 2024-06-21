@@ -1,0 +1,79 @@
+/* h4{
+    color: red;
+}
+#H1{
+    color: blue;
+}
+
+.head.heading{
+    color: green;
+}
+
+.head{
+    text-decoration: underline;
+}
+
+.h1,.h2{
+    color: palegreen ;
+    text-decoration: underline;
+} */
+/* .root{
+    background-color: aquamarine;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;
+    width: 100px;
+} */
+/* div{
+    background-color: aqua;
+    font-size: 2em;
+} */
+/* p{
+    background-color: yellow;
+    font-size: 2em;
+    width: 10em;
+} */
+/* 
+.btn{
+    display: block;
+    background-color: rgb(4, 170, 109);
+    color: rgb(255,255,255);
+    text-align: center;
+    width: fit-content;
+    margin: 10px auto;
+
+    font-size: 20px;
+    padding: 0.3em 1em;
+
+    border-radius: 0.5em;
+    border: none;
+}
+.big{
+    font-size:16px;
+}
+.small{
+    font-size: 13px;
+} */
+/* html{
+    font-size: 10px;
+}
+div{
+    font-size: 2em;
+}
+p{
+    font-size: 3em;
+} */
+/* .btn{
+    background-color: aqua;
+    width: 100vh;
+    height: 100vh;
+} */
+div h3{
+    color:brown;
+}
+div>h3{
+    color: aqua;
+}
+h3+p{
+    color: blue;
+}

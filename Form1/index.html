@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form class="form" onsubmit="handleSubmit(event)" autocomplete="off">
+            <label class="label" for="firstname">First Name</label>
+            <input class="input" id="firstname" type="text">
+            <div id="firstnameError" class="error"></div>
+
+            <label class="label" for="lastname">Last Name</label>
+            <input class="input" id="lastname" type="text">
+            <div id="lastnameError" class="error"></div>
+
+            <label class="label" for="mail">Email</label>
+            <input class="input" id="mail" type="email">
+            <div id="emailError" class="error"></div>
+
+            <label class="label" for="dob">Date of Birth</label>
+            <input class="input" id="dob" type="date">
+            <div id="dobError" class="error"></div>
+
+            <div class="check">
+                <label for="gender">Gender</label>
+                <input id="male" type="radio" name="gender" value="Male">
+                <label for="male">Male</label>
+
+                <input id="female" type="radio" name="gender" value="Female">
+                <label for="female">Female</label>
+
+                <input id="other" type="radio" name="gender" value="Other">
+                <label for="other">Others</label>
+            </div>
+            <div id="genderError" class="error"></div>
+
+            <button class="btn" type="submit">Submit</button>
+            <button class="btn" type="reset">Reset</button>
+        </form>
+    </div>
+    <div id="root" class="card-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
