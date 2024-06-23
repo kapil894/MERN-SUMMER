@@ -2,10 +2,13 @@
 
 <head>
     <style>
+        *{
+            padding:0px;
+            margin: 0px;
+        }
         body {
             font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: #a1a19b;
+            background-color: #ffffff;
         }
 
         main {
@@ -20,8 +23,8 @@
         }
 
         .product-card {
-            background-color: rgb(196, 219, 63);
-            border: 1px solid #df6c6c46;
+            background-color: rgb(116, 148, 121);
+            border: 1px solid #d3d3d346;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin: 10px;
@@ -29,11 +32,37 @@
             width: 200px;
             text-align: center;
         }
+        .topnav{
+            background-color: #50be50;
+            overflow: hidden;
+        }
+        .topnav a{
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding:15px;
+            text-decoration: none;
+            font-size:20px;
+        }
+        .topnav a:hover{
+            background-color: #171a17;;
+        }
+        .root{
+            padding:20px;
+        }
     </style>
 </head>
 
 <body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#new">New</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+    <div class="root">
     <main>$PRODUCTS$</main>
+    </div> 
     <a href=""></a>
 </body>
 

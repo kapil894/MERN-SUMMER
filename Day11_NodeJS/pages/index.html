@@ -1,31 +1,168 @@
-<html lang="en">
+<!-- <html lang="en">
 <head>
     <style>
-        *{
-            padding:0;
-            margin:0;
-        }
+       *{
+        padding:0;
+        margin: 0;
+       }
         nav{
-            height:20vh;
-            background:orangered;
+            display: flex;
+            background-color: aqua;
         }
-        div{
-            height: 70vh;
-            background:white;
+     .div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        padding: 10px;
+        flex-wrap: wrap;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(105, 204, 207);
+        box-shadow: 5px 5px 5px 5px grey;
+        border-radius: 17px;
+     }
+     .topnav{
+            background-color: #9acf9a;
+            overflow: hidden;
         }
-        footer{
-            height: 10vh;
-            background: green;
+        .topnav a{
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding:15px;
+            text-decoration: none;
+            font-size:20px;
+        }
+        .topnav a:hover{
+            background-color: #171a17;;
         }
     </style>
 </head>
 
 <body>
-    <nav></nav>
-    <div>
-        <a href="./products" target="_blank">View PRoducts</a>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#new">New</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
     </div>
-    <footer></footer>
+    <div class="div">
+        <a href="./products" target="_blank">View PRoducts</a>
+   <div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Homepage</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        .topnav {
+            background-color: #54bb54;
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .topnav a:hover {
+            background-color: #171a17;
+
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            padding: 20px;
+            background-color: #69CCCC;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 17px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#new">New</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <div class="card">
+                <a href="./products" target="_blank">View Products</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 
 </html>

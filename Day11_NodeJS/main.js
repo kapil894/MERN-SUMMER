@@ -46,8 +46,10 @@ const app=http.createServer(async (req,res)=>{
            });
            text=text.replace("$Product$",`
             <div class="root">
+                   <h4>Category: ${product.category}</h4>
                    <h3>${product.title}</h3>
                    <img src="${product.thumbnail}" alt="image" height='200'>
+                   <h4>Price: $${product.price}</h4>
                    <p> ${product.description}</p>
                 </div>
             `)
