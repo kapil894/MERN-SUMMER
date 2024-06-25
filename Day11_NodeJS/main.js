@@ -56,6 +56,11 @@ const app=http.createServer(async (req,res)=>{
             res.end(text);
             break;
         }
+        case "/styles":{
+            const bf=await fsPromises.readFile(`./pages/styles.css`);
+            res.end(bf);
+            break;
+        }
         default:{
             res.end("<h2>Oops! Page not Found</h2>")
         }
