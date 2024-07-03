@@ -16,7 +16,7 @@ const validateId = async (req, res, next) => {
         next();
     } catch (err) {
         console.log(err)
-        if (err.name === 'CastError'  ) {
+        if (err.name === 'CastError') {
             res.status(400);
             res.json({
                 status: "fail",
@@ -26,7 +26,7 @@ const validateId = async (req, res, next) => {
         }
         console.log(err);
         res.status(500);
-         res.json({
+        res.json({
             status: "fail",
             err: "Internal server Error",
         })
@@ -108,8 +108,8 @@ const updateProducts = async (req, res) => {
     try {
         const body = req.body;
         const { id } = req.params;
-        body.updatedAt=Date.now(); 
-        const products = await productModel.findOneAndUpdate({ _id: id }, body,{new:true});
+        body.updatedAt = Date.now();
+        const products = await productModel.findOneAndUpdate({ _id: id }, body, { new: true });
         res.status(200);
         res.json({
             status: "updated",
@@ -151,30 +151,40 @@ const deleteProduct = async (req, res) => {
     }
 }
 
-const listProducts=async (req,res)=>{
-//     try{
-//     const productsList=await productModel.find().limit(10n);
-//     res.status(200);
-//     res.json({
-//         status:"success",
-//         data:{
-//             productsList,
-//         }
-//     })
-//  } catch(err){
-//     console.log(err);
-//     res.status(500);
-//  }
+const listProducts = async (req, res) => {
+    //     try{
+    //     const productsList=await productModel.find().limit(10);
+    //     res.status(200);
+    //     res.json({
+    //         status:"success",
+    //         data:{
+    //             productsList,
+    //         }
+    //     })
+    //  } catch(err){
+    //     console.log(err);
+    //     res.status(500);
+    //  }
 
-const {limit=10,...filters}=req.query;//-->  
-const productQuery=productModel.find({filters});
-const limitedPizzas=await productQuery.limit(limit);
-res.json({
-    status:"success",
-    data:{
-        Pizzas:limitedPizzas,
-    }
-})
+    const { limit = 10, q = "",...filters } = req.query;//--> 
+    // const pizzaQuery=productModel.find({
+    //     title:{
+    //         $regex:q,
+    //     },
+    // }) 
+    //   productQuery=productModel.find({filters});
+
+    let pizzaQuery = productModel.find(filters );
+    pizzaQuery=pizzaQuery.where("title").regex(q);
+
+    const limitedPizzas = await pizzaQuery.limit(limit);
+    res.json({
+        status: "success",
+        results: limitedPizzas.length,
+        data: {
+            Pizzas: limitedPizzas,
+        }
+    })
 }
 
 
@@ -182,5 +192,5 @@ res.json({
 
 
 module.exports = {
-    getProducts, createProducts, putProducts, updateProducts, deleteProduct, validateId,listProducts
+    getProducts, createProducts, putProducts, updateProducts, deleteProduct, validateId, listProducts
 }
